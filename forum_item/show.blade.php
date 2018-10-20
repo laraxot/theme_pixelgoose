@@ -27,18 +27,11 @@
                         @foreach($row->linked->forumTopics()->paginate() as $item)
                             @include('pub_theme::layouts.items.forum_topic',['row'=>$item])
                         @endforeach
-                       
                     </ul>
-                    
-                    
-                    
                 </ul>
             </div>
             @include($view.'.body_bottom')
         </div>
-    
-
-            
 			@include('pub_theme::layouts.partials.footer')
 		</div>
 		<div>

@@ -5,10 +5,7 @@
 @section('htmlheader')
 	@include('pub_theme::layouts.partials.htmlheader')
 @show
-{{--
-<body class="landing-page">
---}}
-<body class="body-green"> 
+<body id="phpbb" class="section-index ltr"> 
 @yield('body')
 @section('scripts')
 	@include('pub_theme::layouts.partials.scripts')
