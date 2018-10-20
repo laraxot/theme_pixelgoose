@@ -6,7 +6,9 @@
 			@include('pub_theme::layouts.partials.headernav')
 			<div id="page-body">
 				<div id="page-body-inner">
-					@include('pub_theme::layouts.items.forum_cat')
+					@foreach($forum_cat->archive as $item)
+						@include('pub_theme::layouts.items.forum_cat',['row'=>$item])
+					@endforeach
 					@include('pub_theme::widgets.who_is_online')
 					@include('pub_theme::widgets.statistics')
 				</div>
