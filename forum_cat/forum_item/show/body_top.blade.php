@@ -1,7 +1,10 @@
 <div class="topic-actions">
     <div class="buttons">
         <div class="post-icon" title="Post a new topic">
-            <a href="{{ route('container.container1.container2.create',array_merge($params,['container2'=>'forum_topic'])) }}">Post a new Topic</a>
+            @php
+                $url=route('container.container1.container2.create',array_merge($params,['container2'=>'forum_topic']));
+            @endphp
+            <a href="{{ $url }}" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;add Topic</a>
         </div>
     </div>
     <div class="search-box">

@@ -23,7 +23,10 @@
                         </li>
                     </ul>
                     <ul class="topiclist forums">
+                        {{--
                         @foreach($row->linked->forumItems()->paginate() as $item)
+                        --}}
+                        @foreach($row->related('forum_cat_x_forum_item')->paginate() as $item)
                             @include('pub_theme::layouts.items.forum_item',['row'=>$item])
                         @endforeach
                     </ul>

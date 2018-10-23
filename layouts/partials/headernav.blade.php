@@ -62,9 +62,8 @@
 						<li id="submenu-active-topics"><a href="./search.php?style=2&amp;search_id=active_topics">View active topics</a></li>
 					</ul>
 				</div>
-				<div id="breadcrumbs">
-					<a class="icon-home" href="./index.php?style=2" accesskey="h">Board index</a>
-				</div>
+				@include('pub_theme::layouts.partials.breadcrumb')
+				
 				<ul class="thread-icons"></ul>
 			</div>
 			<a name="start_here"></a>

@@ -1,6 +1,7 @@
 <li class="row bg1">
     <dl class="icon" style="background-image: url(./styles/metro_blue/imageset/topic_read.png); background-repeat: no-repeat;">
-        <dt style="background-image: url(./images/icons/misc/fire.gif); background-repeat: no-repeat;" title="No unread posts"><a href="{{ $row->url }}" class="topictitle">{{ $row->title }}</a>
+        <dt style="background-image: url(./images/icons/misc/fire.gif); background-repeat: no-repeat;" title="No unread posts">
+        <a href="{{ $row->pivot->url }}" class="topictitle">{{ $row->title }}</a>
             <br />
             by <a href="./memberlist.php?style=2&amp;mode=viewprofile&amp;u=2&amp;sid=63d5644606928aa0b01c2f657aaf47e2" style="color: #AA0000;" class="username-coloured">PixelGoose</a> &raquo; Fri Apr 12, 2013 9:47 pm
         </dt>
