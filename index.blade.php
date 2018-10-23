@@ -6,6 +6,11 @@
 			@include('pub_theme::layouts.partials.headernav')
 			<div id="page-body">
 				<div id="page-body-inner">
+					{{--
+					it/forum_cat/create
+					 it/{container}/create   => container.create    
+					--}}
+					<a href="{{ route('container.create',array_merge($params,['container'=>'forum_cat'])) }}">Add Category</a>
 					@foreach($forum_cat->archive as $item)
 						@include('pub_theme::layouts.items.forum_cat',['row'=>$item])
 					@endforeach

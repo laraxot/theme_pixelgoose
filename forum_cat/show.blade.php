@@ -4,9 +4,13 @@
 	<body id="phpbb" class="section-index ltr">
 		<div id="wrap">
 			@include('pub_theme::layouts.partials.headernav')
-			
             <div id="page-body">
                 <h2>{{ $row->title }}</h2>
+                {{--
+                    it/forum_cat/create
+                     it/{container}/create   => container.create    
+                    --}}
+                <a href="{{ route('container.container1.create',array_merge($params,['container1'=>'forum_item'])) }}">Add Item</a>
                 <div class="forabg">
                     <ul class="topiclist">
                         <li class="header">
@@ -22,7 +26,6 @@
                         @foreach($row->linked->forumItems()->paginate() as $item)
                             @include('pub_theme::layouts.items.forum_item',['row'=>$item])
                         @endforeach
-                       
                     </ul>
                 </div>
                 @include($view.'.body_bottom')
