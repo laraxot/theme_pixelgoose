@@ -1,7 +1,6 @@
 <li class="row">
     <dl class="icon" style="background-image: url(./styles/metro_blue/imageset/forum_read.png); background-repeat: no-repeat;">
         <dt title="No unread posts">
-            [{{ $row->pivot->url }}]
             <a href="{{ $row->pivot->url }}" class="forumtitle">{{ $row->title }}</a><br />
             {{$row->subtitle}}
         </dt>

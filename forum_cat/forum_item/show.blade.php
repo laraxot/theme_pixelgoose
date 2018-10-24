@@ -20,7 +20,10 @@
                 </ul>
                 <ul class="topiclist topics">
                     <ul class="topiclist forums">
+                        {{--
                         @foreach($row->linked->forumTopics()->paginate() as $item)
+                        --}}
+                        @foreach($row->related('forum_topic')->paginate() as $item)
                             @include('pub_theme::layouts.items.forum_topic',['row'=>$item])
                         @endforeach
                     </ul>

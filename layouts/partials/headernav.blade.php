@@ -2,12 +2,17 @@
 <div id="page-header">
 	<div id="above-headerbar">
 		<ul class="user-links">
+			@include('lu::auth.links')
+			{{--
 			<li>
 				<a href="#login-box" class="login-window" title="Login" accesskey="x" data-toggle="modal" data-target="#login-box">Login</a>
 				<a href="{{ url('/login') }}" class="login-link" title="Login" accesskey="x">Login</a>
 			</li>
+			--}}
 		</ul>
+		{{--
 		@include('pub_theme::layouts.partials.headernav.login-box')
+		--}}
 		@include('pub_theme::layouts.partials.headernav.search-box')
 	</div>
 	<div id="header">

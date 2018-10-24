@@ -3,7 +3,7 @@
         <dt style="background-image: url(./images/icons/misc/fire.gif); background-repeat: no-repeat;" title="No unread posts">
         <a href="{{ $row->pivot->url }}" class="topictitle">{{ $row->title }}</a>
             <br />
-            by <a href="./memberlist.php?style=2&amp;mode=viewprofile&amp;u=2&amp;sid=63d5644606928aa0b01c2f657aaf47e2" style="color: #AA0000;" class="username-coloured">PixelGoose</a> &raquo; Fri Apr 12, 2013 9:47 pm
+            by <a href="" style="color: #AA0000;" class="username-coloured">{{ $row->created_by}}</a> &raquo; {{ $row->created_at }}
         </dt>
         <dd class="posts">5 <dfn>Replies</dfn></dd>
         <dd class="views">197165 <dfn>Views</dfn></dd>

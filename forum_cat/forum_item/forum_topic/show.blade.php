@@ -14,7 +14,7 @@
 			<a href="{{ route('container.create',array_merge($params,['container'=>'forum_cat'])) }}">Add Category</a>
 					--}}
             @include($view.'.body_top')
-            @foreach($row->linked->forumPosts()->paginate() as $item)
+            @foreach($row->related('forum_post')->paginate() as $item)
                 @include('pub_theme::layouts.items.forum_post',['row'=>$item])
             @endforeach
             @include($view.'.body_bottom')
