@@ -4,7 +4,9 @@
             @php
                 $url=route('container.container1.container2.create',array_merge($params,['container2'=>'forum_topic']));
             @endphp
+            @can('create',$forum_topic->linkedOrCreate)
             <a href="{{ $url }}" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;add Topic</a>
+            @endcan
         </div>
     </div>
     <div class="search-box">
