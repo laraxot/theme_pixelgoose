@@ -3,8 +3,8 @@
 	<div id="above-headerbar">
 		<ul class="user-links">
 			<li>
-				<a href="#login-box" class="login-window" title="Login" accesskey="x">Login</a>
-				<a href="./ucp.php?style=2&amp;mode=login" class="login-link" title="Login" accesskey="x">Login</a>
+				<a href="#login-box" class="login-window" title="Login" accesskey="x" data-toggle="modal" data-target="#login-box">Login</a>
+				<a href="{{ url('/login') }}" class="login-link" title="Login" accesskey="x">Login</a>
 			</li>
 		</ul>
 		@include('pub_theme::layouts.partials.headernav.login-box')
