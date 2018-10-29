@@ -24,8 +24,8 @@
                 </ul>
                 <ul class="topiclist topics">
                     <ul class="topiclist forums">
-                        @foreach($row->linked->forumTopics()->paginate() as $item)
-                            @include('pub_theme::layouts.items.forum_topic',['row'=>$item])
+                        @foreach($row->linked->forumTopics()->paginate() as $item0)
+                            @include('pub_theme::layouts.items.forum_topic',['row'=>$item0])
                         @endforeach
                     </ul>
                 </ul>

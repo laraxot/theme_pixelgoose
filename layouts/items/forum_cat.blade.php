@@ -11,10 +11,10 @@
         </ul>
         <ul class="topiclist forums">
             {{--
-            @foreach($row->linked->forumItems()->paginate() as $item)
+            @foreach($row->linked->forumItems()->paginate() as $item0)
             --}}
-            @foreach($row->related('forum_item')->paginate() as $item)
-                @include('pub_theme::layouts.items.forum_item',['row'=>$item])
+            @foreach($row->related('forum_item')->paginate() as $item0)
+                @include('pub_theme::layouts.items.forum_item',['row'=>$item0])
             @endforeach
         </ul>
     </div>

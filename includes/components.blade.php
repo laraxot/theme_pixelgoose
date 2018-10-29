@@ -20,7 +20,7 @@
     */
     if(isset($container)){
         if(is_object($container)){$container_type=$container->type;}else{$container_type=$container;}
-        $routename=str_replace('container.',''.$container->type.'.',$routename);
+        $routename=str_replace('container0.',''.$container->type.'.',$routename);
     }
     if(isset($container1)){
         if(is_object($container1)){$container1_type=$container1->type;}else{$container1_type=$container1;}

@@ -5,15 +5,15 @@
 <div id="page-body-inner">
 	{{--
 	it/forum_cat/create
-		it/{container}/create   => container.create    
+		it/{container}/create   => container0.create    
 	--}}
 	@can('create',$forum_cat->linkedOrCreate)
-	<a href="{{ route('container.create',array_merge($params,['container'=>'forum_cat'])) }}" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;Add Category</a>
+	<a href="{{ route('container0.create',array_merge($params,['container'=>'forum_cat'])) }}" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;Add Category</a>
 	@else
 	
 	@endcan
-	@foreach($forum_cat->archive()->paginate() as $item)
-		@include('pub_theme::layouts.items.forum_cat',['row'=>$item])
+	@foreach($forum_cat->archive()->paginate() as $item0)
+		@include('pub_theme::layouts.items.forum_cat',['row'=>$item0])
 	@endforeach
 	@include('pub_theme::widgets.who_is_online')
 	@include('pub_theme::widgets.statistics')

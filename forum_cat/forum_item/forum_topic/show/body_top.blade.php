@@ -2,7 +2,7 @@
 	<div class="buttons">
 		<div class="reply-icon">
 			@php
-			$url=route('container.container1.container2.container3.create',array_merge($params,['container3'=>'forum_post']));
+			$url=route('container0.container1.container2.container3.create',array_merge($params,['container3'=>'forum_post']));
 			@endphp
 			<a href="{{ $url }}" title="Post a reply" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;Post a reply</a>
 		</div>

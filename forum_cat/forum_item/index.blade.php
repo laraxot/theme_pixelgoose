@@ -5,10 +5,10 @@
 	<h2>{{ $row->title }}</h2>
 	{{--
 		it/forum_cat/create
-		 it/{container}/create   => container.create    
+		 it/{container}/create   => container0.create    
 		--}}
 	@php
-	$url=route('container.container1.create',array_merge($params,['container1'=>'forum_item']));
+	$url=route('container0.container1.create',array_merge($params,['container1'=>'forum_item']));
 	@endphp
 	<a href="{{ $url }}" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;Add Item</a>
 	<div class="forabg">
@@ -24,11 +24,11 @@
 		</ul>
 		<ul class="topiclist forums">
 			{{--
-			@foreach($row->linked->forumItems()->paginate() as $item)
-			@foreach($row->archive()->paginate() as $item)
+			@foreach($row->linked->forumItems()->paginate() as $item0)
+			@foreach($row->archive()->paginate() as $item0)
 			--}}
-			@foreach($item->related('forum_cat_x_forum_item')->paginate() as $item)
-				@include('pub_theme::layouts.items.forum_item',['row'=>$item])
+			@foreach($item0->related('forum_cat_x_forum_item')->paginate() as $item0)
+				@include('pub_theme::layouts.items.forum_item',['row'=>$item0])
 			@endforeach
 		</ul>
 	</div>

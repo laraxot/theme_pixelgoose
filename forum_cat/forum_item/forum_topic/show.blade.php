@@ -10,12 +10,12 @@
             <div style="display: none !important;">Description of your first forum.<br /></div>
             {{--
 					it/forum_cat/create
-					 it/{container}/create   => container.create    
-			<a href="{{ route('container.create',array_merge($params,['container'=>'forum_cat'])) }}">Add Category</a>
+					 it/{container}/create   => container0.create    
+			<a href="{{ route('container0.create',array_merge($params,['container'=>'forum_cat'])) }}">Add Category</a>
 					--}}
             @include($view.'.body_top')
-            @foreach($row->related('forum_post')->paginate() as $item)
-                @include('pub_theme::layouts.items.forum_post',['row'=>$item])
+            @foreach($row->related('forum_post')->paginate() as $item0)
+                @include('pub_theme::layouts.items.forum_post',['row'=>$item0])
             @endforeach
             @include($view.'.body_bottom')
         </div>
