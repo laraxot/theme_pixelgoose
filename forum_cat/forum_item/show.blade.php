@@ -1,7 +1,7 @@
 @extends('pub_theme::layouts.app')
 @section('content')
-@include('pub_theme::includes.components')
-@include('pub_theme::includes.flash')
+@include('extend::includes.components')
+@include('extend::includes.flash')
             <h2>{{ $row->title }}</h2>
             <div>
                 <div style="display: none !important;">Description of your first forum.<br /></div>

@@ -20,7 +20,7 @@
 			{{--  
 			<img src="{{ Theme::image_src('theme/pub/images/site_logo.png') }}" width="125" height="31" alt="" title="" />
 			--}}
-			<h2 class="text-white">{{ $home->title }}</h2>
+			<h2 class="text-white">{{ (isset($home) && is_object($home))?$home->title:'' }}</h2>
 		</a>
 		<div class="tabs-outer">
 			<a href="javascript:void(0);" title="Menu" class="toggleMenuButton"></a>

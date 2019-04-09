@@ -1,7 +1,7 @@
 @extends('pub_theme::layouts.app')
 @section('content')
-@include('pub_theme::includes.components')
-@include('pub_theme::includes.flash')
+@include('extend::includes.components')
+@include('extend::includes.flash')
 	<h2>{{ $row->title }}</h2>
 	{{--
 		it/forum_cat/create
@@ -27,7 +27,7 @@
 			@foreach($row->linked->forumItems()->paginate() as $item0)
 			@foreach($row->archive()->paginate() as $item0)
 			--}}
-			@foreach($item0->related('forum_cat_x_forum_item')->paginate() as $item0)
+			@foreach($item0->forumItems()->paginate() as $item0)
 				@include('pub_theme::layouts.items.forum_item',['row'=>$item0])
 			@endforeach
 		</ul>

@@ -1,7 +1,7 @@
 @extends('pub_theme::layouts.app')
 @section('content')
-@include('pub_theme::includes.components')
-@include('pub_theme::includes.flash')
+@include('extend::includes.components')
+@include('extend::includes.flash')
 <div id="page-body-inner">
 	{{--
 	it/forum_cat/create
