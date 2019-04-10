@@ -32,7 +32,7 @@
 @include($view_default.'.btns.gear')
 <div class="page-wrapper">
 	@includeFirst([$view.'.inner_page',$view_default.'.inner_page.'.$edit_type,$view_default.'.inner_page'],['edit_type'=>$edit_type])
-	@include('pub_theme::layouts.partials.breadcrumb_params')
+	@include('pub_theme::layouts.partials.breadcrumb')
 	@if(is_array($parent_tabs))
 		@includeFirst([$view.'.parent_tabs',$view_default.'.parent_tabs'],['tabs'=>$parent_tabs] )
 	@endif

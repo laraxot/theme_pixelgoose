@@ -34,7 +34,7 @@
 	@include('pub_theme::layouts.partials.top_links',['step'=>$step])
 @endif
 @includeFirst([$view.'.inner_page',$view_default.'.inner_page.'.$show_type,$view_default.'.inner_page'],['row'=>$row,'show_type'=>$show_type])
-@include('pub_theme::layouts.partials.breadcrumb_params')
+@include('pub_theme::layouts.partials.breadcrumb')
 @if(is_array($tabs))
 	@includeFirst([$view.'.tabs',$view_default.'.tabs'],['tabs'=>$tabs] )
 @endif

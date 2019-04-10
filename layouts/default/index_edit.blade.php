@@ -36,7 +36,7 @@
 			@else
 				@includeFirst([$view.'.inner_page',$view_default.'.inner_page'])
 			@endif
-			@include('pub_theme::layouts.partials.breadcrumb_params')
+			@include('pub_theme::layouts.partials.breadcrumb')
 			@if(is_array($parent_tabs))
 				@if(!\View::exists($view.'.parent_tabs') && !\View::exists($view_default.'.parent_tabs') )
 					{{ ddd('not exists ['.$view.'.parent_tabs]['.$view_default.'.parent_tabs] ') }}
