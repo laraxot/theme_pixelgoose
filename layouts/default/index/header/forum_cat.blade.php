@@ -1,0 +1,1 @@
+{!! Form::bsBtnCreate(['row'=>$forum_cat->getLinkedModel()]) !!}
