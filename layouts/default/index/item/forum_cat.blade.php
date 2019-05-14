@@ -10,6 +10,13 @@
 		</li>
 	</ul>
 	<ul class="topiclist forums">
+		@can('create',$forum_item->getLinkedModel())
+		<li>
+			<a href="{{ route('container0.container1.create',['container0'=>'forum_cat','item0'=>$row,'container1'=>$forum_item->post_type]) }}" class="btn btn-secondary"><i class="fa fa-plus"></i>&nbsp;Add Item</a>
+		</li>
+		@endcan
+
+
 		@foreach($row->forumItems()->paginate() as $item0)
 			@include('pub_theme::layouts.items.forum_item',['row'=>$item0])
 		@endforeach

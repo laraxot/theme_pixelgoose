@@ -1,4 +1,4 @@
-{!! Form::bsBtnCreate(['row'=>$row]) !!}
+{!! Form::bsBtnCreate(['row'=>$row,'txt'=>'Add Category']) !!}
 <div class="forabg">
 	<ul class="topiclist">
 		<li class="header">
