@@ -12,7 +12,7 @@
 	</ul>
 	<ul class="topiclist forums">
 		@foreach($row->forumItems as $item0)
-			@include('pub_theme::layouts.items.forum_item',['row'=>$item0])
+			@include('pub_theme::layouts.default.show.item.forum_item',['row'=>$item0])
 		@endforeach
 	</ul>
 </div>
